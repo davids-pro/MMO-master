@@ -10,23 +10,27 @@ class Guerrier extends Personnage
     $this->setMuscle($muscle);
   }
 
-
+  /** 
+   * GETTER MUSCLE
+   */
   public function getMuscle()
   {
     return $this->muscle;
   }
 
-  public function setMuscle(String $muscle)
+  /**
+   * SETTER MUSCLE: string
+   */
+  public function setMuscle(string $muscle)
   {
     $this->muscle = $muscle;
   }
 
+  /**
+   * METHODS
+   */
   function seBattre(Guerrier $guerrier)
   {
     echo 'Je suis ' . $guerrier->getNom() . ' et je me bats';
   }
 }
-
-$erkul = new Guerrier('Erkul', 100, 100, 'max');
-var_dump($erkul);
-$erkul->seBattre($erkul);
