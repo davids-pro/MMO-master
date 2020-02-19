@@ -26,7 +26,3 @@ class Guerrier extends Personnage
     echo 'Je suis ' . $guerrier->getNom() . ' et je me bats';
   }
 }
-
-$erkul = new Guerrier('Erkul', 100, 100, 'max');
-var_dump($erkul);
-$erkul->seBattre($erkul);
