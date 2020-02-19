@@ -35,5 +35,6 @@ class Mage extends Personnage{
         echo "je suis " . $mage->getNom() . " et je suis plein d'énergie ";
     }
 }
-$kamelito = new Mage('kamelito', 78, 100, 100 );
-var_dump($kamelito);
+// $kamelito = new Mage('kamelito', 78, 100, 100 );
+// var_dump($kamelito);
+// $kamelito->sort($kamelito);
