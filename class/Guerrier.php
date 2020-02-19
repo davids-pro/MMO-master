@@ -6,7 +6,14 @@ class Guerrier extends Personnage
   function __construct($nom, $force, $sante, $rage)
   {
     parent::__construct($nom, $force, $sante);
-    $this->hydrate([$rage]);
+    $values = ['rage' => $rage];
+    $hydratation = new Hydratation($values);
+    $hydratation->hydrate();
+    foreach ($hydratation->getResult() as $value) {
+      if (method_exists($this, $value[0])) {
+        $this->{$value[0]}($value[1]);
+      }
+    }
   }
 
   /** 

@@ -8,15 +8,11 @@ class Personnage
   public function __construct($nom, $sante, $force)
   {
     $values = ['nom' => $nom, 'sante' => $sante, 'force' => $force];
-    $this->hydrate($values);
-  }
-
-  public function hydrate($values)
-  {
-    foreach ($values as $key => $value) {
-      $method = 'set' . ucfirst($key);
-      if (method_exists($this, $method)) {
-        $this->{$method}($value);
+    $hydratation = new Hydratation($values);
+    $hydratation->hydrate();
+    foreach ($hydratation->getResult() as $value) {
+      if (method_exists($this, $value[0])) {
+        $this->{$value[0]}($value[1]);
       }
     }
   }
