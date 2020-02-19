@@ -5,11 +5,20 @@ class Personnage
   private $force;
   private $sante;
 
-  public function __construct($nom, $force, $sante)
+  public function __construct($nom, $sante, $force)
   {
-    $this->setNom($nom);
-    $this->setForce($force);
-    $this->setSante($sante);
+    $values = ['nom' => $nom, 'sante' => $sante, 'force' => $force];
+    $this->hydrate($values);
+  }
+
+  public function hydrate($values)
+  {
+    foreach ($values as $key => $value) {
+      $method = 'set' . ucfirst($key);
+      if (method_exists($this, $method)) {
+        $this->{$method}($value);
+      }
+    }
   }
 
   /**
