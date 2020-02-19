@@ -7,6 +7,6 @@ include('class/Guerrier.php');
 include('class/Mage.php');
 include('class/Voleur.php');
 
-$erkul = new Guerrier('Erkul', 50, 50, 100);
+$erkul = new Guerrier('Fatima', 100, 1, 2);
 
 var_dump($erkul);
