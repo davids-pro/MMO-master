@@ -1,5 +1,4 @@
 <?php
-
 class Voleur extends Personnage
 {
   private $agility;

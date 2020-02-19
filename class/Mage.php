@@ -1,24 +1,24 @@
 <?php
-include('Personnage.php');
-class Mage extends Personnage{
-
+class Mage extends Personnage
+{
     private $mana;
     private $intelligence;
 
     public function __construct($nom, $force, $sante, $mana, $intelligence)
-        {
-            parent::__construct($nom, $force, $sante);
-            $this->setMana($mana);
-            $this->setIntelligence($intelligence);
-        }
+    {
+        parent::__construct($nom, $force, $sante);
+        $this->setMana($mana);
+        $this->setIntelligence($intelligence);
+    }
 
-//GETTER
+    //GETTER
 
     /**
      * return $mana
      * type: integer
      */
-    public function getMana(){
+    public function getMana()
+    {
         return $this->mana;
     }
 
@@ -26,17 +26,19 @@ class Mage extends Personnage{
      * return $intelligence
      * type: integer
      */
-    public function getIntelligence(){
+    public function getIntelligence()
+    {
         return $this->intelligence;
     }
 
-//SETTER
+    //SETTER
 
     /**
      * set value $mana
      * type: integer
      */
-    public function setMana(int $mana){
+    public function setMana(int $mana)
+    {
         $this->mana = $mana;
     }
 
@@ -44,15 +46,16 @@ class Mage extends Personnage{
      * set value $intelligence
      * type: integer
      */
-    public function setIntelligence(int $intelligence){
+    public function setIntelligence(int $intelligence)
+    {
         $this->intelligence = $intelligence;
     }
 
-//METHODE SPECIFIQUE
-    public function sort(Mage $mage){
+    /**
+     * METHODS
+     */
+    public function sort(Mage $mage)
+    {
         echo "je suis " . $mage->getNom() . " et je suis plein d'énergie ";
     }
 }
-//  $kamelito = new Mage('kamelito', 25, 100, 100, 100 );
-//  var_dump($kamelito);
-//  $kamelito->sort($kamelito);

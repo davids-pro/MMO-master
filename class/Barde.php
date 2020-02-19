@@ -1,6 +1,4 @@
 <?php
-include('Personnage.php');
-
 class Barde extends Personnage
 {
     private $mana;
@@ -74,7 +72,3 @@ class Barde extends Personnage
     }
 
 }
-
-$Anduin = new Barde('Anduin' , 65 , 20 , 200 , 80, 50);
-var_dump($Anduin);
-$Anduin->Soigner($Anduin);

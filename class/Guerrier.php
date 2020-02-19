@@ -1,6 +1,4 @@
 <?php
-
-
 class Guerrier extends Personnage
 {
   private $rage;
