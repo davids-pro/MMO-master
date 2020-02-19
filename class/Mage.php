@@ -13,6 +13,16 @@ class Mage extends Personnage{
         return $this->mana;
     }
 
+//SETTER
+
+    /**
+     * set value $mana
+     * type: integer
+     */
+    public function setMana(int $mana){
+        $this->mana = $mana;
+    }
+
 //METHODE SPECIFIQUE
     public function sort(Mage $mage){
         echo "je suis " . $mage->getNom() . " et je suis plein d'énergie ";
