@@ -3,11 +3,13 @@ include('Personnage.php');
 class Mage extends Personnage{
 
     private $mana;
+    private $intelligence;
 
-    public function __construct($nom, $force, $sante, $mana)
+    public function __construct($nom, $force, $sante, $mana, $intelligence)
         {
             parent::__construct($nom, $force, $sante);
             $this->setMana($mana);
+            $this->setIntelligence($intelligence);
         }
 
 //GETTER
@@ -20,6 +22,14 @@ class Mage extends Personnage{
         return $this->mana;
     }
 
+    /**
+     * return $intelligence
+     * type: integer
+     */
+    public function getIntelligence(){
+        return $this->intelligence;
+    }
+
 //SETTER
 
     /**
@@ -30,11 +40,19 @@ class Mage extends Personnage{
         $this->mana = $mana;
     }
 
+    /**
+     * set value $intelligence
+     * type: integer
+     */
+    public function setIntelligence(int $intelligence){
+        $this->intelligence = $intelligence;
+    }
+
 //METHODE SPECIFIQUE
     public function sort(Mage $mage){
         echo "je suis " . $mage->getNom() . " et je suis plein d'énergie ";
     }
 }
-// $kamelito = new Mage('kamelito', 78, 100, 100 );
-// var_dump($kamelito);
-// $kamelito->sort($kamelito);
+//  $kamelito = new Mage('kamelito', 25, 100, 100, 100 );
+//  var_dump($kamelito);
+//  $kamelito->sort($kamelito);
