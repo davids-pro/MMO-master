@@ -30,6 +30,6 @@ class Guerrier extends Personnage
    */
   function seBattre(Guerrier $guerrier)
   {
-    echo "<h4 style='color:red'>" .'Je suis ' . $guerrier->getNom() . ' et je me bats' . "</h4>";
+    echo "<h4 style='color:red'>" . "⚔️ " .'Je suis ' . $guerrier->getNom() . ' et je me bats' . " ⚔️" . "</h4>";
   }
 }
