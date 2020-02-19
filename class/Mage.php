@@ -56,6 +56,6 @@ class Mage extends Personnage
      */
     public function sort(Mage $mage)
     {
-        echo "je suis " . $mage->getNom() . " et je suis plein d'énergie ";
+        echo "<h4 style='color:blue'>" ."je suis " . $mage->getNom() . " et je suis plein d'énergie " . "</h4>";
     }
 }

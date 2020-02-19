@@ -68,7 +68,7 @@ class Barde extends Personnage
     }
 
     function Soigner(Barde $barde) {
-        echo 'Je suis ' . $barde->getNom() . ' et je soigne';
+        echo "<h4 style='color:green'>" .'Je suis ' . $barde->getNom() . ' et je soigne' . "</h4>";
     }
 
 }
