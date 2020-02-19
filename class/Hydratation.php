@@ -1,5 +1,5 @@
 <?php
-class Hydratation implements Hydrate
+class Hydratation
 {
   private $values;
   private $result = [];
@@ -29,7 +29,7 @@ class Hydratation implements Hydrate
   {
     return $this->result;
   }
-  
+
   /**
    * HYDRATATION
    */

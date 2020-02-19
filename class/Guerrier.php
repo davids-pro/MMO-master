@@ -7,13 +7,7 @@ class Guerrier extends Personnage
   {
     parent::__construct($nom, $force, $sante);
     $values = ['rage' => $rage];
-    $hydratation = new Hydratation($values);
-    $hydratation->hydrate();
-    foreach ($hydratation->getResult() as $value) {
-      if (method_exists($this, $value[0])) {
-        $this->{$value[0]}($value[1]);
-      }
-    }
+    $this->hydrate($values);
   }
 
   /** 
@@ -35,6 +29,17 @@ class Guerrier extends Personnage
   /**
    * METHODS
    */
+  public function hydrate(array $values)
+  {
+    $hydratation = new Hydratation($values);
+    $hydratation->hydrate();
+    foreach ($hydratation->getResult() as $value) {
+      if (method_exists($this, $value[0])) {
+        $this->{$value[0]}($value[1]);
+      }
+    }
+  }
+
   function seBattre(Guerrier $guerrier)
   {
     echo "<h4 style='color:red'>" . "⚔️ " . 'Je suis ' . $guerrier->getNom() . ' et je me bats' . " ⚔️" . "</h4>";

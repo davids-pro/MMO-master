@@ -1,5 +1,5 @@
 <?php
 interface Hydrate
 {
-  public function hydrate();
+  public function hydrate(array $values);
 }

@@ -1,5 +1,5 @@
 <?php
-class Personnage
+class Personnage implements Hydrate
 {
   private $nom;
   private $force;
@@ -8,13 +8,7 @@ class Personnage
   public function __construct($nom, $sante, $force)
   {
     $values = ['nom' => $nom, 'sante' => $sante, 'force' => $force];
-    $hydratation = new Hydratation($values);
-    $hydratation->hydrate();
-    foreach ($hydratation->getResult() as $value) {
-      if (method_exists($this, $value[0])) {
-        $this->{$value[0]}($value[1]);
-      }
-    }
+    $this->hydrate($values);
   }
 
   /**
@@ -68,6 +62,17 @@ class Personnage
   /**
    * METHODS
    */
+  public function hydrate(array $values)
+  {
+    $hydratation = new Hydratation($values);
+    $hydratation->hydrate();
+    foreach ($hydratation->getResult() as $value) {
+      if (method_exists($this, $value[0])) {
+        $this->{$value[0]}($value[1]);
+      }
+    }
+  }
+
   public function seDeplacer(Personnage $personnage)
   {
     echo 'Je suis' . $personnage->getNom() . ' et je me deplace';
