@@ -3,28 +3,28 @@
 
 class Guerrier extends Personnage
 {
-  private $muscle;
+  private $rage;
 
-  function __construct($nom, $force, $sante, $muscle)
+  function __construct($nom, $force, $sante, $rage)
   {
     parent::__construct($nom, $force, $sante);
-    $this->setMuscle($muscle);
+    $this->setRage($rage);
   }
 
   /** 
    * GETTER MUSCLE
    */
-  public function getMuscle()
+  public function getRage()
   {
-    return $this->muscle;
+    return $this->rage;
   }
 
   /**
    * SETTER MUSCLE: string
    */
-  public function setMuscle(string $muscle)
+  public function setRage(int $rage)
   {
-    $this->muscle = $muscle;
+    $this->rage = $rage;
   }
 
   /**
