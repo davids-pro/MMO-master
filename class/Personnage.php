@@ -12,11 +12,6 @@ class Personnage
     $this->setSante($sante);
   }
 
-
-  //############
-  //#  GETTER  #
-  //############
-
   /**
    * return: $nom
    * type: string
@@ -43,10 +38,6 @@ class Personnage
   {
     return $this->sante;
   }
-
-  //##########
-  //# Setter #
-  //##########
 
   /**
    * set value : $nom
@@ -75,17 +66,17 @@ class Personnage
     $this->sante = $sante;
   }
 
-  //####################
-  //# SPECIFIC METHODS #
-  //####################
+  /**
+   * METHODS
+   */
 
-  function seDeplacer(Personnage $personnage)
+  public function seDeplacer(Personnage $personnage)
   {
-    echo 'Je suis' . $personnage->getNom() . 'et je me deplace';
+    echo 'Je suis' . $personnage->getNom() . ' et je me deplace';
   }
 
-  function parler(Personnage $personnage)
+  public function parler(Personnage $personnage)
   {
-    echo 'Je suis' . $personnage->getNom() . 'et je parle';
+    echo 'Je suis' . $personnage->getNom() . ' et je parle';
   }
 }
