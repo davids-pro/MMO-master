@@ -13,8 +13,7 @@ class Personnage
   }
 
   /**
-   * return: $nom
-   * type: string
+   * GETTER NOM
    */
   public function getNom()
   {
@@ -22,8 +21,7 @@ class Personnage
   }
 
   /**
-   * return: $force
-   * type: integer
+   * GETTER FORCE
    */
   public function getForce()
   {
@@ -31,8 +29,7 @@ class Personnage
   }
 
   /**
-   * return: $sante
-   * type: integer
+   * GETTER SANTE
    */
   public function getSante()
   {
@@ -40,8 +37,7 @@ class Personnage
   }
 
   /**
-   * set value : $nom
-   * type : string
+   * SETTER NOM: string
    */
   public function setNom(string $nom)
   {
@@ -49,8 +45,7 @@ class Personnage
   }
 
   /**
-   * set value : $force
-   * type : integer
+   * SETTER FORCE: int
    */
   public function setForce(int $force)
   {
@@ -58,8 +53,7 @@ class Personnage
   }
 
   /**
-   * set value : $sante
-   * type : integer
+   * SETTER SANTE: int
    */
   public function setSante(int $sante)
   {
@@ -69,7 +63,6 @@ class Personnage
   /**
    * METHODS
    */
-
   public function seDeplacer(Personnage $personnage)
   {
     echo 'Je suis' . $personnage->getNom() . ' et je me deplace';
