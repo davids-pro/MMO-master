@@ -3,6 +3,13 @@
 class Mage extends Personnage{
 
     private $mana;
+
+    public function __construct($nom, $sante, $force, $mana)
+        {
+            parent::__construct($nom, $sante, $force);
+            $this->setMana($mana);
+        }
+
 //GETTER
 
     /**
