@@ -1,12 +1,12 @@
-﻿<?php
-
+<?php
+include('Personnage.php');
 class Mage extends Personnage{
 
     private $mana;
 
-    public function __construct($nom, $sante, $force, $mana)
+    public function __construct($nom, $force, $sante, $mana)
         {
-            parent::__construct($nom, $sante, $force);
+            parent::__construct($nom, $force, $sante);
             $this->setMana($mana);
         }
 
@@ -35,3 +35,5 @@ class Mage extends Personnage{
         echo "je suis " . $mage->getNom() . " et je suis plein d'énergie ";
     }
 }
+$kamelito = new Mage('kamelito', 78, 100, 100 );
+var_dump($kamelito);
