@@ -30,6 +30,6 @@ class Voleur extends Personnage
    */
   function voler(Voleur $voleur)
   {
-    echo 'Je suis ' . $voleur->getNom() . ' et je chourrave';
+    echo "<h4 style='color:black'>" . 'Je suis ' . $voleur->getNom() . ' et je chourrave' . "</h4>";
   }
 }

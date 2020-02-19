@@ -17,3 +17,8 @@ var_dump($erkul);
 var_dump($garrosh);
 var_dump($anduin);
 var_dump($korva);
+
+$erkul->voler($erkul);
+$garrosh->seBattre($garrosh);
+$anduin->Soigner($anduin);
+$korva->sort($korva);
